@@ -1,0 +1,205 @@
+<!DOCTYPE>
+<html class="page">
+<head>
+	<meta charset="utf-8">
+	<title>Рятівний комплімент — допоможе підняти настрій</title>
+	<meta name="description" content="Зробіть своїм близьким приємне, подаруйте їм комплімент. Компліменти для дівчат, хлопців, друзів та рідних.">
+	<style>
+		.page,
+		.page__body
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		.page__body
+		{
+			font: 12px/18px Helvetica, Arial, sans-serif;
+		}
+
+		.rotator
+		{
+			position: relative;
+
+			width: 900px;
+			height: 100%;
+			min-height: 550px;
+			margin: auto;
+			padding: 0 20px;
+		}
+
+		.rotator,
+		.rotator .link
+		{
+			color: #fff;
+		}
+
+		.rotator .link
+		{
+			text-decoration: none;
+		}
+
+		.rotator__title
+		{
+			font-size: 30px;
+
+			padding: 30px 0;
+
+			text-transform: lowercase;
+		}
+
+		.rotator__phrase
+		{
+			font-size: 72px;
+			font-weight: bold;
+
+			line-height: 80px;
+		}
+
+		.rotator__actions
+		{
+			font-size: 18px;
+			font-weight: bold;
+
+			position: absolute;
+			bottom: 0;
+
+			width: 940px;
+			margin: 0;
+			padding: 30px 0;
+
+			text-align: center;
+			text-transform: lowercase;
+		}
+
+		.rotator__action,
+		.rotator__separator
+		{
+			display: inline-block;
+
+			vertical-align: middle;
+		}
+
+		.rotator__separator
+		{
+			width: 1px;
+			height: 25px;
+			margin: 0 5px;
+
+			background: #fff;
+		}
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		var phrases = [
+		{
+		"color":"#0080FF",
+		"phrase":"У вас аристократичний профіль, вам потрібно позувати для скульпторів."
+		},
+		{
+		"color" : "#01DF3A",
+		"phrase" : "Всі твої друзі хвилюються, бо вони не такі веселі, як ти."
+		},
+		{
+		"color" : "#0080FF",
+		"phrase" : "Твоєму босу дуже сподобалось те, що ти зробив на роботі сьогодні."
+		},
+		{
+		"color" : "#FF0080",
+		"phrase" : "Ви найгарніша людина в радіусі 100 км."
+		},
+		{
+		"color" : "#0080FF",
+		"phrase" : "Я б міг тобі повністю довірити свою собаку на вихідні."
+		},
+		{
+		"color" : "#FF0080",
+		"phrase" : "Твій голос звучить, як сотня котів, що муркочуть."
+		},
+		{
+		"color" : "#FFBF00",
+		"phrase" : "Кожна друга держава заздрить, що ти є громадянином нашої країни."
+		},
+		{
+		"color" : "#0080FF",
+		"phrase" : "Ти б міг стати астронавтом. Про це мені розповіли в NASA."
+		},
+		{
+		"color" : "#01DF3A",
+		"phrase" : "Твоє волосся пахне, як свіжоскошена трава."
+		},
+		{
+		"color" : "#FF0080",
+		"phrase" : "Ніхто ніколи тобі про це не говорив, але твій бос в захопленні від тебе."
+		},
+		{
+		"color" : "#01DF3A",
+		"phrase" : "Дитина, повз яку ми сьогодні пройшли на вулиці, хоче бути такою, як ви, коли виросте."
+		},
+		{
+		"color" : "#FFBF00",
+		"phrase" : "Всі були в захопленні від того, як ти співав в душі."
+		},
+		{
+		"color" : "#FF0080",
+		"phrase" : "Продовжуй ходити голяка. Твоїм сусідам це дуже подобається."
+		},
+		{
+		"color":"FFBF00",
+		"phrase":"Твоє фото з випускного альбому — найкраще."
+		},
+		{
+		"color" : "#0080FF",
+		"phrase" : "8 з 10 співробітників вважають, що твій стіл є найчистішим."
+		},
+		{
+		"color" : "#01DF3A",
+		"phrase" : "Ти б був останнім, хто залишився в фільмі жахів."
+		},
+		{
+		"color" : "#FF0080",
+		"phrase" : "Ти – найкращий у приготуванні вівсянки."
+		},
+		{
+		"color" : "#0080FF",
+		"phrase" : "Твої батьки пишаються тобою."
+		}
+		];
+		function random_compliment(event) {
+		compliment = phrases[Math.floor(Math.random() * phrases.length)];
+		$(".rotator__phrase").html(compliment.phrase);
+		$(".better a").attr("href", compliment.link);
+		$("body").css("background-color", compliment.color);
+		};
+		random_compliment();
+		$(".rotator__action_more_yes").click(random_compliment);
+		});
+	</script>
+</head>
+<body class="page__body">
+	<div class="rotator">
+		<h1 class="rotator__title">Рятівний комплімент</h1>
+		<p class="rotator__phrase"></p>
+		<ul class="rotator__actions">
+			<li class="rotator__action rotator__action_more_yes">
+				<a class="link" href="#">Хочу ще</a>
+			</li>
+			<li class="rotator__separator"></li>
+			<li class="rotator__action">
+				<a class="link" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffirelemonade.com%2F&source=tweetbutton&text=Рятівний%20комплімент%20%E2%80%94%20допоможе%20підняти%20настрій&url=http%3A%2F%2Ffirelemonade.com%2F">Поділитися</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-9179265-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
