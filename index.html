@@ -110,7 +110,6 @@
         function show() {
             $('.phrases li').css('visibility', 'hidden');
             var compliment = phrases[Math.floor(Math.random() * phrases.length)];
-            window.location.hash = '#' + compliment.link;
             $('body').css('background', '#' + compliment.color);
             $('.phrases li:nth-child(' + compliment.link + ')').css('visibility', 'visible');
         };
@@ -158,7 +157,7 @@
 https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Femergencycompliment.org.ua%2F&source=tweetbutton&text=Рятівний%20комплімент%20%E2%80%94%20допоможе%20підняти%20настрій&url=http%3A%2F%2Femergencycompliment.org.ua%2F">Поділитися</a>
             </li>
             <li class="rotator__separator"></li>
-            <li class="rotator__action"><a class="link" href="http://emergencycompliment.com">©</a></li>
+            <li class="rotator__action"><a class="link" target="_blank" href="http://emergencycompliment.com">©</a></li>
         </ul>
     </div>
     <script>
